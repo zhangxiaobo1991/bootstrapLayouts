@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bootstrap排版</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      .wrap{
+        background-color:#aaa;
+      }
+      .wrap [class*='col-']{
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-top:10px;
+        margin-bottom:10px;
+        background:rgba(100,10,192,0.15);
+        border:1px solid rgba(192,10,86,0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container wrap">
+      <h1>这是一个h1标签<small>这是一个副标题</small></h1>
+      <p>虽然可以直接使用 Bootstrap 提供的 CSS 样式表，不要忘记 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 - Less 和 Sass 开发的。你可以采用预编译的 CSS 文件快速开发，也可以从源码定制自己需要的样式。
+        <br>
+      虽然可以直接使用 Bootstrap 提供的 CSS 样式表，不要忘记 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 - Less 和 Sass 开发的。你可以采用预编译的 CSS 文件快速开发，也可以从源码定制自己需要的样式。</p>
+      <p class="lead">虽然可以直接使用 Bootstrap 提供的 CSS 样式表，不要忘记 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 - Less 和 Sass 开发的。你可以采用预编译的 CSS 文件快速开发，也可以从源码定制自己需要的样式。</p>
+
+
+      <p>虽然可以直接使用 Bootstrap 提供的 CSS 样式表，   <mark>内联文本元素</mark>   不要忘记 Bootstrap 的源码是基于最流行   <ins>插入文本</ins>   的 CSS 预处理脚本 - Less 和 Sass 开发的。你可以采用预编译的 CSS 文  <del>删除线</del>   件快速开发，也可以   <s>无用文本</s>    从源码定制自己需要的样式。</p>
+
+      <p>虽然可以直接使用 Bootstrap 提供的 CSS 样式表，不要忘记   <u>带下划线文本</u>    Bootstrap 的源码是基   <small>小号文本：  <strong>着重</strong>  设置为父元素文本大小的85%</small>   于最流行的 CSS 预处理脚本 - Less 和 Sass 开发的。  <em>倾斜</em>  你可以采用预编译的 CSS 文件快速开发，也可以从源码定制自己需要的样式。</p>
+
+      <p class="text-left text-capitalize">英语世界最重要文学奖之一的布克奖在伦敦公布了今年的获奖结果，美国小说<strong>家乔治·桑德斯</strong>（George Saunders）凭借长篇小说《林肯在中阴界》（<span class='text-capitalize'>abcdefg</span>）获奖。</p>
+      <p class='text-center'>英语世界最重要文学奖之一的布克奖在伦敦公布了今年的获奖结果，美国小说<del>家乔治·桑德斯</del>（George Saunders）凭借长篇小说《林肯在中阴界》（Lincoln in the Bardo）获奖。</p>
+      <p class='text-right'>英语世界最重要文学奖之一的布克奖在伦敦公布了今年的获奖结果，美国小说家<u>乔治·桑德斯</u>（<b class='text-uppercase'>George Saunders</b>）凭借长篇小说《林肯在中阴界》（Lincoln in the Bardo）获奖。</p>
+      <p class='text-justify'>英语世界最重要文学奖之一的布克奖在伦敦公布了今年的获奖结果，美国小说家<ins>乔治·桑德斯</ins>（<i class='text-capitalize'>George Saunders</i>）凭借长篇小说《林肯在中阴界》（Lincoln in the Bardo）获奖。</p>
+      <p class='text-nowrap text-lowercase'>英语世界最重要文学奖之一的布克奖在伦敦公布了今年的获奖结果，<em><small>美国小说家</small>乔治·桑德斯</em>（George Saunders）凭借长篇小说《林肯在中阴界》（Lincoln in the Bardo）获奖。</p>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

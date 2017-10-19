@@ -51,6 +51,39 @@
         line-height: 30px;
         background-color:rgba(200,10,0,0.3);
       }
+
+      
+
+
+      .test{
+        background: #fff;
+      }
+
+      .test .row{
+        margin-top:10px;
+        margin-bottom:0;
+        color:#333;
+      }
+
+      .test [class*=col-lg]{
+        padding-top:10px;
+        padding-bottom:10px;
+        border:1px solid #ddd;
+        background-color: #eee;
+        border:1px solid rgba(86,61,124,0.2);
+        background-color:rgba(86,61,124,0.15);
+      }
+
+      .container.more{
+        background-color:#fff;
+      }
+
+      .container.more [class*=col-]{
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color: rgba(138,60,199,0.15);
+        border:1px solid rgba(138,60,199,0.2);
+      }
     </style>
   </head>
 
@@ -104,6 +137,112 @@
       <div class="col-md-4">container-fluid col-md-4</div>
       <div class="col-md-4">container-fluid col-md-4</div>
       <div class="col-md-4">container-fluid col-md-4</div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">col-sm-3</div>
+        <div class="col-sm-3">col-sm-3</div>
+        <div class="col-sm-3">col-sm-3</div>
+        <div class="col-sm-3">col-sm-3</div>
+      </div>
+    </div>
+
+
+    <div class="container test">
+      <div class="row">
+        <div class="col-lg-2 col-xs-12">.col-lg-2</div>
+        <div class="col-lg-2">.col-lg-2</div>
+        <div class="col-lg-2">.col-lg-2</div>
+        <div class="col-lg-2">.col-lg-2</div>
+        <div class="col-lg-2">.col-lg-2</div>
+        <div class="col-lg-2">.col-lg-2</div>
+      </div>
+    </div>
+
+    <div class="container test">
+      <div class="row">
+        <div class="col-lg-4 col-xs-12">col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4col-lg-4</div>
+        <div class="col-lg-8 col-xs-6">col-lg-8</div>
+      </div>
+    </div>
+
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-3">
+          col-md-3
+          <div class="row">
+            <div class="col-md-6">A</div>
+          </div>
+        </div>
+        <div class="col-md-3">col-md-3</div>
+        <div class="col-md-3">col-md-3</div>
+        <div class="col-md-3">col-md-3</div>
+      </div>
+    </div>
+
+    <!-- 未偏移 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4">A</div>
+        <div class="col-md-4">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移一 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-1">A</div>
+        <div class="col-md-4 col-md-push-1">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移二 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-2">A</div>
+        <div class="col-md-4 col-md-push-2">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移三 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-3">A</div>
+        <div class="col-md-4 col-md-push-3">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移四 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-4">A</div>
+        <div class="col-md-4 col-md-push-4">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移五 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-8">A</div>
+        <div class="col-md-4 col-md-push-4">B</div>
+        <div class="col-md-2">C</div>
+      </div>
+    </div>
+
+    <!-- 偏移六 -->
+    <div class="container more">
+      <div class="row">
+        <div class="col-md-4 col-md-push-12">A</div>
+        <div class="col-md-4 col-md-push-4">B</div>
+        <div class="col-md-2">C</div>
+      </div>
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
