@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bootstrap导航</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <ul class='nav nav-tabs nav-justified' id='mytab'>
+        <li class='active'><a href="#">122123</a></li>
+        <li class="disabled"><a href="#">122123</a></li>
+        <li><a href="#">122123</a></li>
+        <li>
+
+          <a class='btn btn-info dropdown-toggle' data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="">12123123</a></li>
+            <li><a href="">12123123</a></li>
+            <li><a href="">12123123</a></li>
+            <li><a href="">12123123</a></li>
+            <li><a href="">12123123</a></li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('#mytab li').click(function(e) {
+          $(this).addClass("active").siblings().removeClass('active');
+        })
+      })
+    </script>
+  </body>
+</html>
