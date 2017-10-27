@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>数字滚动效果一</title>
+    <link rel="stylesheet" href="">
+    <style>
+      html * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body{
+        background-color: rgba(0,0,0,0.5);
+      }
+
+      .wrap{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border:2px solid rgba(0,0,0,0.7);
+        border-radius: 10px;
+        background-color: #ccc;
+        margin:-25px 0 0 -25px;
+        box-shadow: 0 5px 10px rgba(50,50,50,0.8) inset, 
+                    0 -5px 10px rgba(50,50,50,0.8) inset, 
+                    0 0 5px rgba(0,0,0,0.5);
+        overflow: hidden;
+      }
+
+      ul{
+        margin: 0 auto;
+        /*transition: all 0.2s;*/
+      }
+
+      li{
+        color: rgba(10,10,10,0.7);
+        text-align: center;
+        list-style: none;
+        display: block;
+        /*border-bottom:1px solid rgba(10,10,10,0.7);*/
+      }
+
+      .info{
+        position: absolute;
+        top:60%;
+        left:50%;
+        transform: translateX(-50%);
+        background: #aaa;
+        border:1px solid rgba(0,0,0,0.5);
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+        padding: 30px 100px 10px;
+        color:#333;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="wrap">
+      <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+    </div>
+    <div class="info">
+      <pre>
+数字滚动效果原型
+1、使用jQuery animate函数来实现动画 
+2、感觉动画有点卡
+3、使用interval来进行动画，使用的动画是平滑的
+      </pre>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        var ul = $('.wrap ul'),
+            lis = ul.find('li'),
+            h = lis.eq(1).height(),
+            index = 0,
+            speed = 2000;
+            
+        
+        setInterval(function() {
+          ul.animate({'marginTop':-h},speed,function() {
+            index = index%10;
+            ul.find('li').eq(0).appendTo(ul);
+            ul.css('marginTop',0);
+            index ++;
+          })
+        },speed);
+      })
+    </script>
+  </body>
+</html>
