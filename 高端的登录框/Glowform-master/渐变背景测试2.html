@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>渐变背景测试2</title>
+  <style>
+    html *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      background: #333;
+    }
+
+    .center-box{
+      width: 300px;
+      height: 200px;
+      /*border:1px solid #fff;*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left:-150px;
+      margin-top: -100px;
+      background-color: #333;
+      
+      background-repeat: repeat;
+      animation: run 3s infinite;
+
+      overflow: hidden;
+    }
+
+    @keyframes run{
+      100%{
+        background-position: 300px 0;
+      }
+    }
+
+    @keyframes roll{
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(180deg);
+      }
+    }
+
+
+
+    .circle{
+      width: 500px;
+      height:500px;
+      margin-top:-150px;
+      margin-left:-100px;
+      background-color:rgba(0,0,0,0);
+      background-image: 
+      linear-gradient(90deg,rgba(0,0,0,0) 180px,#00f 180px, #00f 320px,rgba(0,0,0,0) 320px,rgba(0,0,0,0) 500px),
+      linear-gradient(0deg,rgba(0,0,0,0) 200px,#00f 200px, #00f 300px,rgba(0,0,0,0) 300px,rgba(0,0,0,0) 500px);
+
+      animation: roll 5s infinite linear;
+    }
+
+    .input-box{
+      width: 294px;
+      height: 194px;
+      
+      background-color:rgba(33,33,33,1);
+      position: absolute;
+      top:3px;
+      left:3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-box">
+    <div class="circle">
+    </div>
+    <div class="input-box"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>渐变背景测试</title>
+  <style>
+    html *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      background: #333;
+    }
+
+    @keyframes moves{
+      0%{background-image: linear-gradient(0deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      5%{background-image: linear-gradient(9deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      10%{background-image: linear-gradient(18deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      15%{background-image: linear-gradient(27deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      20%{background-image: linear-gradient(36deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      25%{background-image: linear-gradient(45deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      30%{background-image: linear-gradient(54deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      35%{background-image: linear-gradient(63deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      40%{background-image: linear-gradient(72deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      45%{background-image: linear-gradient(81deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      50%{background-image: linear-gradient(90deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      55%{background-image: linear-gradient(99deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      60%{background-image: linear-gradient(108deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      65%{background-image: linear-gradient(117deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      70%{background-image: linear-gradient(126deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      75%{background-image: linear-gradient(135deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      80%{background-image: linear-gradient(144deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      85%{background-image: linear-gradient(153deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      90%{background-image: linear-gradient(162deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      95%{background-image: linear-gradient(171deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+      100%{background-image: linear-gradient(180deg, #f00 40%, #000 40%, #000 60%, #fff 60%, #fff 100%);}
+
+    }
+
+    .center-box{
+      width: 300px;
+      height: 150px;
+      border:1px solid #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left:-150px;
+      margin-top: -75px;
+      /*background-color:#000;*/
+      background-image: 
+          linear-gradient(
+            0deg, 
+            #f00 40%, 
+            #000 40%, 
+            #000 60%, 
+            #fff 60%, 
+            #fff 100%
+            );
+
+      animation: moves 5s 5;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="center-box">
+    
+  </div>
+</body>
+</html>
